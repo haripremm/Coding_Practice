@@ -15,12 +15,24 @@ cursor = mydb.cursor()
 value = " Insert into Employee_Management(Emp_id, User_name, Email, Phone, deparment, salary,  Joining_date) Values (%s,%s,%s,%s,%s,%s,%s)"
 
 Detail = [
-    (101,"Hari", "hari@gmail.com", 967535853,"ECE",17000, "2025-02-13"),
-    (102,"Prasath", "prasath@gmail.com", 967523453,"ECE",17000,"2025-06-22") 
+    (103,"Ravi", "ravi@gmail.com", 9675234553,"ECE",18000,"2025-08-22"),
+    (104,"Vijay", "Vijay@gmail.com", 9687323453,"CSE",52000,"2021-08-20"),
+    (105,"Ajith", "Ajith@gmail.com", 9675282573,"EEE",111000,"2016-07-12"),
+    (106,"Kumar", "kumar@gmail.com", 9623434593,"ECE",12500,"2025-05-22")
     ]
 
 cursor.executemany(value,Detail)
 
 mydb.commit()
 
-print("Inserted Sucessfully")
+cursor.execute('Select * from Employee_Management')
+
+result=cursor.fetchall()
+
+for i in result:
+    print(i)
+
+#print("Inserted Sucessfully")
+
+
+
