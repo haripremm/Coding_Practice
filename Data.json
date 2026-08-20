@@ -1,0 +1,35 @@
+
+[
+    {
+        "Name": "PREM",
+        "Age": 26,
+        "Course": "BE",
+        "Dept": "EEE",
+        "Collage": "AVIT"
+    },
+    [
+        {
+            "Name": "hari",
+            "Age": 23,
+            "Course": "ece",
+            "Dept": "BE",
+            "Collage": "KVCET"
+        }
+    ],
+    [
+        {
+            "Name": "PRIYA",
+            "Age": 23,
+            "Course": "ECE",
+            "Dept": "BE",
+            "Collage": "SSN"
+        }
+    ],
+    {
+        "Name": "RAVI",
+        "Age": 22,
+        "Course": "BE",
+        "Dept": "BME",
+        "Collage": "SSN"
+    }
+]
