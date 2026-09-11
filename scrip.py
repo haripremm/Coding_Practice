@@ -1,36 +1,35 @@
-import smtplib
-import os
-from dotenv import load_dotenv
+'''from fastapi import FastAPI 
 
-load_dotenv()
-email = os.getenv("Email")
-email1= os.getenv("Email1")
-passw = os.getenv("py_password")
-test= smtplib.SMTP('smtp.gmail.com', 587)
-test.ehlo()
-test.starttls()
+app = FastAPI()
 
-message = """ 
-Subject: Application - Fresher- Hariprasath M
+@app.get("/")
 
-Dear Hiring Team,
+def read):
+    return {" Hello":"World"}
 
-I am excited to apply for the at Analyst PPM EBOM at Ford India Pvt. Ltd.
+@app.get("/Items/{item_id}")
 
-My name is Hariprasath, and I am a recent graduate in Electronics and Communication Engineering (B.E., 2025) from Karpaga Vinayaga Collage of Engineering and Technology.
-With a strong academic foundation and hands-on experience in Python, SQL, Ms Office (Excel, Word, PowerPoint), Digital Electronics and Networking. And Good in Communication, Problem-Solving, Logical Thinking. I believe I would be strong fit for this role.
+def read_item(item_id:int,q:str):'''
 
-I have attached my resume for your review. I would be grateful for the opportunity to discuss how my background and enthusiasm can contribute to your team.
-Thank you for your time and consideration. I look forward to the possibility of hearing from you.
+#***** ADDRESS VALIDATOR *****
 
-Best regards,
+def addressVal(address):
+    dot = address.find(".")
+    at = address.find("@")
 
-Hariprasath M
-Mobile: 9360073685
-Email: hariprasathprem@gmail.com
-"""
+    if (dot !=-1) and (at != -1):
+        print(f"{address} is a Valid Email")
+    else:
+        print(f"{address} is a InValid Email")
 
-test.login(email,passw)
-test.sendmail(email, email1,message)
-test.quit()
-print("Email Sent Sucessfully!")
+print(" To Verify the valid Email....")
+
+while(True):
+    print("To Verify a Valid Email addess needs an @ and '.' Symbol ")
+
+    x = input("Enter Your Email address: ")
+    break
+
+    addressVal(x)
+   
+    
